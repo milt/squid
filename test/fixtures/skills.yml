@@ -1,0 +1,8 @@
+# Skills
+audio:
+ name: Audio
+ skill_category_id: 1
+
+video:
+ name: Video
+ skill_category_id: 2
