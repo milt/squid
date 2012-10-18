@@ -1,3 +1,5 @@
+require 'user_patch'
+
 Redmine::Plugin.register :squid do
   name 'Squid plugin'
   author 'Milt Reder'
