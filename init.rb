@@ -1,8 +1,8 @@
 Redmine::Plugin.register :squid do
   name 'Squid plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
+  author 'Milt Reder'
+  description 'This is a plugin for Redmine for internal use at the JHU Digital Media Center'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'http://github.com/milt/squid'
+  author_url 'http://digitalmedia.jhu.edu'
 end
