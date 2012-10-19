@@ -10,22 +10,27 @@ class SkillLevelTest < ActiveSupport::TestCase
   end
 
   test "skill levels need a skill" do
-    level = SkillLevel.new(user_id: 1)
+    level = SkillLevel.new(user_id: 2)
     assert !level.valid?, "skill level saved without skill"
   end
 
   test "skill levels need a rating" do
-    level = SkillLevel.new(user_id: 1, skill_id: 1)
+    level = SkillLevel.new(user_id: 4, skill_id: 1)
     assert !level.valid?, "skill level saved without rating"
   end
 
   test "skill levels need a rating between 1-3" do
-    level = SkillLevel.new(user_id: 1, skill_id: 1, rating: 4)
+    level = SkillLevel.new(user_id: 4, skill_id: 1, rating: 4)
     assert !level.valid?, "skill level saved with out-of-bounds rating"
   end
 
   test "skill levels need a numerical rating" do
-    level = SkillLevel.new(user_id: 1, skill_id: 1, rating: "foo")
+    level = SkillLevel.new(user_id: 4, skill_id: 1, rating: "foo")
     assert !level.valid?, "skill level saved with non-integer rating"
+  end
+
+  test "only one skill level per skill for a given user" do
+    level = SkillLevel.new(user_id: 2, skill_id: 1, rating: 3)
+    assert !level.valid?, "duplicate skill level saved"
   end
 end

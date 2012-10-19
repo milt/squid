@@ -10,7 +10,7 @@ class AuthorizationTest < ActiveSupport::TestCase
   end
 
   test "authorizations need an item" do
-    auth = Authorization.new(user_id: 1)
+    auth = Authorization.new(user_id: 2)
     assert !auth.valid?, "saved auth without item"
   end
 
