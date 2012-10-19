@@ -1,6 +1,7 @@
 require File.expand_path('../../test_helper', __FILE__)
 
 class AuthorizationTest < ActiveSupport::TestCase
+  fixtures :items, :users
 
   # Validations
   test "authorizations need a user" do

@@ -1,6 +1,7 @@
 require File.expand_path('../../test_helper', __FILE__)
 
 class SkillTest < ActiveSupport::TestCase
+  fixtures :skills, :skill_categories
 
   # Validations
   test "skills should have names" do

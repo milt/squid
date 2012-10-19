@@ -1,6 +1,7 @@
 require File.expand_path('../../test_helper', __FILE__)
 
 class ItemTest < ActiveSupport::TestCase
+  fixtures :items
 
   # Validations
   test "items should not save without a name" do
