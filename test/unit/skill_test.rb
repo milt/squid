@@ -2,19 +2,19 @@ require File.expand_path('../../test_helper', __FILE__)
 
 class SkillTest < ActiveSupport::TestCase
 
-  # Replace this with your real tests.
+  # Validations
   test "skills should have names" do
     skill = Skill.new(skill_category_id: 1)
-    assert !skill.save
+    assert !skill.valid?, "saved skill without name"
   end
 
-  test "skills should have categories" do
+  test "skills should have non nil categories" do
     skill = Skill.new(name: "3d")
-    assert !skill.save
+    assert !skill.valid?, "saved skill with nil category"
   end
 
   test "skill names should be unique" do
     skill = Skill.new(name: "Video", skill_category_id: 2)
-    assert !skill.save
+    assert !skill.valid?, "saved skill with non-unique name"
   end
 end

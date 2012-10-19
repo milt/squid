@@ -1,6 +1,8 @@
 # items
 raygun:
+ id: 1
  name: Super Hyper Raygun
 
 vixia:
+ id: 2
  name: Canon Vixia

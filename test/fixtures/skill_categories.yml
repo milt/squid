@@ -1,6 +1,8 @@
 #skill_categories
 audio:
+ id: 1
  name: Audio
 
 video:
+ id: 2
  name: Video
