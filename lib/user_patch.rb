@@ -10,10 +10,10 @@ module UserPatch
 
     base.class_eval do
       unloadable
-      has_many :skill_levels, :dependent => :destroy
-      has_many :skills, :through => :skill_levels
+      has_many :skill_levels, dependent: :destroy
+      has_many :skills, through: :skill_levels
       has_many :authorizations
-      has_many :items, :through => :authorizations
+      has_many :items, through: :authorizations
 
     end
 
