@@ -1,0 +1,8 @@
+# Authorizations
+raygun_auth:
+ user_id: 2
+ item_id: 1
+
+level_3:
+ user_id: 3
+ item_id: 2
