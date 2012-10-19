@@ -9,6 +9,7 @@ class SkillCategoryTest < ActiveSupport::TestCase
   end
 
   test "skill category names should be unique" do
+    skill_category = SkillCategory.create(name: "Video")
     skill_category = SkillCategory.new(name: "Video")
     assert !skill_category.valid?, "saved skill category with non-unique name"
   end

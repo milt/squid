@@ -22,4 +22,9 @@ class SkillLevelTest < ActiveSupport::TestCase
     auth = SkillLevel.new(user_id: 1, skill_id: 1, rating: 4)
     assert !auth.valid?, "skill level saved with out-of-bounds rating"
   end
+
+  test "skill levels need a numerical rating" do
+    auth = SkillLevel.new(user_id: 1, skill_id: 1, rating: "foo")
+    assert !auth.valid?, "skill level saved with non-integer rating"
+  end
 end
